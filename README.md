@@ -1,5 +1,9 @@
 # fc.rstats
-A package with various functions that help people working with OPTA and ChyronHego data, this will be a regularly updated with new functions. 
+A package with various functions that help people working with OPTA and ChyronHego data, this will be a regularly updated with new functions. Installed via: 
+
+``` r
+devtools::install_github("FCrSTATS/fc.rstats")
+```
 
 ### parse_f24()
 ##### Parse an OPTA f24 Files 
