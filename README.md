@@ -15,3 +15,6 @@ Chyronhego tracking data working with pitch length of 10500 and width of 6600. U
 
 ![](https://github.com/FCrSTATS/fc.rstats/blob/master/images/CHpitchoptions.jpg)
 
+### parse_tracking()
+##### Parse an ChyronHego Tracking Data File 
+ChyronHego's tracking data contains positional data at 25 frames per second. The raw data comes in .dat format with all players, officials and ball positional data per frame combined in a string. This function spilts up the string and arranges the resulting data in a logical format.  
