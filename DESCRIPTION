@@ -11,5 +11,6 @@ Imports:
 	dplyr,
 	xml2,
 	purrr,
-	XML
+	XML,
+	ggplot2
 RoxygenNote: 6.0.1
