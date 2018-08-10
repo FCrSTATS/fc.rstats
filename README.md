@@ -13,5 +13,5 @@ A ChyronHego Metadata file contains key information in order to use the actual T
 ##### Create a Pitch ready for Chyronhego data
 Chyronhego tracking data working with pitch length of 10500 and width of 6600. Uses ggplot and returns a plot ready for further data to be plotted over the top.   
 
-![](https://github.com/FCrSTATS/fc.stats/blob/master/images/CHpitchoptions.jpg)
+![](https://github.com/FCrSTATS/fc.rstats/blob/master/images/CHpitchoptions.jpg)
 
