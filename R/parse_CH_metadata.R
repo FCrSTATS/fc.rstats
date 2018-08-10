@@ -9,9 +9,19 @@
 #' @export
 
 parse_CH_metadata <- function(xml.filename){
+  
+      grabAll <- function(XML.parsed, field){
+      parse.field <- xpathSApply(XML.parsed, paste("//", field, "[@*]", sep=""))
+      results <- t(sapply(parse.field, function(x) xmlAttrs(x)))
+      if(typeof(results)=="list"){
+        do.call(rbind.fill, lapply(lapply(results, t), data.frame, stringsAsFactors=F))
+      } else {
+        as.data.frame(results, stringsAsFactors=F)
+      }
+    }
     
     library(XML)
-    pbpParse <- xmlInternalTreeParse(metadata.xml)
+    pbpParse <- xmlInternalTreeParse(xml.filename)
     temp <- grabAll(pbpParse, "match")
     period.info <- grabAll(pbpParse, "period")
     temp$period1Start <- as.numeric(as.character(period.info$iStartFrame[1]))
