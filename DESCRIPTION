@@ -10,5 +10,6 @@ LazyData: true
 Imports: 
 	dplyr,
 	xml2,
-	purrr
+	purrr,
+	XML
 RoxygenNote: 6.0.1
