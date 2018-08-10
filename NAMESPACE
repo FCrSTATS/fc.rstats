@@ -2,4 +2,5 @@
 
 export(parse_CH_metadata)
 export(parse_f24)
+export(create_CH_pitch)
 
