@@ -10,6 +10,9 @@ devtools::install_github("FCrSTATS/fc.rstats")
 ### parse_f24()
 **Parse an OPTA f24 Files:** An OPTA f24 file is an xml file with all of the data for each event of a match. The parse_24() function takes the file location and parses the XML file converting it into a dataframe. All qualifiers are in columns named after them. If the qualifier doesn't have a value but was present it is represented by the value 1.
 
+### parse_f7()
+**Parse an OPTA f7 Files:** OPTA f7 file is an xml file with various information about a match such as lineups, goals, cards, kits used and more. This function takes the file location and parses the XML file into a dataframes which are stored in a list. 
+
 
 ### parse_CH_metadata()
 **Parse an ChyronHego Metadata File:** A ChyronHego Metadata file contains key information in order to use the actual Tracking data. This simple function takes the path to an xml file and returns a parsed dataframe.
