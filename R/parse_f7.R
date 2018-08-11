@@ -9,7 +9,7 @@
 #' @return A list of dataframes containing match information
 #' @export
 
-OPTA_Parse.f7 <- function(f7.xml, MatchID){
+parse_f7 <- function(f7.xml, MatchID){
    
 #//------ Load XML --------------------------------------------------------//
   
