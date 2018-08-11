@@ -3,4 +3,5 @@
 export(create_CH_pitch)
 export(parse_CH_metadata)
 export(parse_f24)
+export(parse_f7)
 export(parse_tracking)
