@@ -1,10 +1,10 @@
 Package: FC.rSTATS
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: A package with various functions that help people working with OPTA and ChyronHego data
+Version: 1.0
+Authors@R: person("Mr", "Ghost", role = c("aut", "cre"))
+Description: A package with various functions that help people working with OPTA and ChyronHego data. 
 Depends: R (>= 3.5.0)
-License: What license is it under?
+License: Do as you please 
 Encoding: UTF-8
 LazyData: true
 Imports: 
