@@ -21,6 +21,20 @@ devtools::install_github("FCrSTATS/fc.rstats")
 ### parse_tracking()
 **Parse an ChyronHego Tracking Data File:** ChyronHego's tracking data contains positional data at 25 frames per second. The raw data comes in .dat format with all players, officials and ball positional data per frame combined in a string. This function spilts up the string and arranges the resulting data in a logical format. 
 
+## Data Preparation Functions 
+
+### add_TimeSync()
+**Add a TimeSync variable :** The OPTA and ChyronHego datasets don't share a common clock. OPTA data is recorded in seconds and ChyronHego
+data is recorded at 25 frames a second. The addition of a TimeSync variable to the events dataframe allows the two dataframes to be synced and linked together easier with a common clock.
+
+### add_attacking_direction() 
+**Add the attacking direction to events:** Adding a variable of 'attacking.direction' to the events dataframe allows us to keep track of the direction of play and how that relates to x, y positioning. It's a basic but crucial variable to add to our events dataframe to improve our analysis.
+
+### add_CH_origin()
+**Convert the pass origin from OPTA to ChyronHego spec:** OPTA event data has two variables x and y, that represent the the x and y pitch coordinates for the origina point of an event. We can convert from OPTA 0-100 values to ChyronHego CM and return the events dataframe back with new variables of origin.x and origin.y. The attacking.direction needs to be added to the events dataframe first from the 'add_attacking_direction' function in this package. 
+
+### add_pass_target()
+**Convert the pass destination from OPTA to ChyronHego spec:** OPTA event data has two variables x and y, that represent the the x and y pitch coordinates for the origina point of an event. We can convert from OPTA 0-100 values to ChyronHego CM and return the events dataframe back with new variables of origin.x and origin.y. The attacking.direction needs to be added to the events dataframe first from the 'add_attacking_direction' function in this package. 
 
 ## Plotting Functions 
 
