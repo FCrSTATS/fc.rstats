@@ -6,7 +6,7 @@ Description: A package with various functions that help people working with OPTA
 Depends: R (>= 3.5.0)
 License: Do as you please 
 Encoding: UTF-8
-LazyData: true
+LazyData: false
 Imports: 
 	dplyr,
 	xml2,
