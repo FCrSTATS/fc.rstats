@@ -132,7 +132,7 @@ OPTA_Parse.f7 <- function(f7.xml, MatchID){
     Kits <- bind_rows(KitsH, KitsA)
     colnames(Kits) <- c("id", "colour1", "colour2", "type", "team_HA")
       
-    GameCentreTemp <- list(PlayersDB = ID_DB, GameData = GameData, Goals = Goals, Kits = Kits)
+    GameCentreTemp <- list(PlayersDB = ID_DB, GameData = GameData, Goals = Goals, Kits = Kits, Bookings = Bookings)
         return(GameCentreTemp)
     } # end of function 
    
