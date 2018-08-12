@@ -125,14 +125,14 @@ parse_f7 <- function(f7.xml, MatchID){
     
     Bookings <- as.data.frame(t(xpathSApply(pbpParse, paste("//", "TeamData/Booking", "[@*]", sep=""), xmlAttrs)),stringsAsFactors = F)
 
-    KitsH <- as.data.frame(t(unlist(xpathSApply(pbpParse, paste("//", "Team/Kit", "[@*]", sep=""), xmlAttrs)[1])), stringsAsFactors = F)
-    KitsH$team_HA <- 1
-    KitsA <- as.data.frame(t(unlist(xpathSApply(pbpParse, paste("//", "Team/Kit", "[@*]", sep=""), xmlAttrs)[2])), stringsAsFactors = F)
-    KitsA$team_HA <- 0
-    Kits <- bind_rows(KitsH, KitsA)
-    colnames(Kits) <- c("id", "colour1", "colour2", "type", "team_HA")
+    #KitsH <- as.data.frame(t(unlist(xpathSApply(pbpParse, paste("//", "Team/Kit", "[@*]", sep=""), xmlAttrs)[1])), stringsAsFactors = F)
+    #KitsH$team_HA <- 1
+    #KitsA <- as.data.frame(t(unlist(xpathSApply(pbpParse, paste("//", "Team/Kit", "[@*]", sep=""), xmlAttrs)[2])), stringsAsFactors = F)
+    #KitsA$team_HA <- 0
+    #Kits <- bind_rows(KitsH, KitsA)
+    #colnames(Kits) <- c("id", "colour1", "colour2", "type", "team_HA")
       
-    GameCentreTemp <- list(PlayersDB = ID_DB, GameData = GameData, Goals = Goals, Kits = Kits, Bookings = Bookings)
+    GameCentreTemp <- list(PlayersDB = ID_DB, GameData = GameData, Goals = Goals, Bookings = Bookings)
         return(GameCentreTemp)
     } # end of function 
    
