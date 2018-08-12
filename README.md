@@ -44,7 +44,10 @@ data is recorded at 25 frames a second. The addition of a TimeSync variable to t
 ### create_OPTA_pitch()
 **Create a Pitch ready for OPTA data:** A pitch plot base that is designed for the OPTA values for x and y of 0-100. Uses ggplot and returns a plot ready for further data to be plotted over the top.   
 
+
+
 Both create_CH_pitch() and create_OPTA_pitch() functions are customisable with various options: 
+
 ![](https://github.com/FCrSTATS/fc.rstats/blob/master/images/CHpitchoptions.jpg)
 
  
