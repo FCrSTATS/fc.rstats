@@ -30,6 +30,6 @@ create_OPTA_pitch(grass_colour = "#F9F9F9", line_colour = "#8F8F8F",
 A pitch plot, that allows data to be plotted on top
 }
 \description{
-Chyronhego tracking data working with pitch OPTA values for x and y of 9-100
+A pitch plot base that is designed for the OPTA values for x and y of 0-100
 Uses ggplot and returns a plot ready for further data to be plotted over the top.
 }
