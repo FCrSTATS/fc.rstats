@@ -7,7 +7,7 @@ Depends: R (>= 3.5.0)
 License: Do as you please 
 Encoding: UTF-8
 LazyData: false
-Imports: 
+Depends: 
 	dplyr,
 	xml2,
 	purrr,
