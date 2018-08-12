@@ -1,6 +1,6 @@
 #' Create a Pitch ready for OPTA data
 #'
-#' Chyronhego tracking data working with pitch OPTA values for x and y of 9-100
+#' A pitch plot base that is designed for the OPTA values for x and y of 0-100
 #' Uses ggplot and returns a plot ready for further data to be plotted over the top.   
 #' @param grass_colour Colour of the grass, Default = "#F9F9F9", HEXCODE or accept colour string i.e. "red" 
 #' @param line_colour Colour of the line, Default = "#8F8F8F", HEXCODE or accept colour string i.e. "red" 
@@ -63,7 +63,8 @@ create_OPTA_pitch <- function(grass_colour = "#F9F9F9",
   ## Basic Features
   p <- p +
   # add the base rectangle of the pitch
-  geom_rect(aes(xmin=0, xmax=100, ymin=0, ymax=100), fill = NA, colour = line_colour) +
+  geom_rect(aes(xmin=0, xmax=50, ymin=0, ymax=100), fill = NA, colour = line_colour) +
+  geom_rect(aes(xmin=50, xmax=100, ymin=0, ymax=100), fill = NA, colour = line_colour) +
   # add the 18 yard box defensive
   geom_rect(aes(xmin=0, xmax=17, ymin=21.1, ymax=78.9), fill = grass_colour, colour = line_colour) +
   # add the 18 yard box offensive
