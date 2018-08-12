@@ -2,7 +2,7 @@
 % Please edit documentation in R/add_CH_origin.R
 \name{add_CH_origin}
 \alias{add_CH_origin}
-\title{Convert the pass destination from OPTA to ChyronHego spec}
+\title{Convert the pass origin from OPTA to ChyronHego spec}
 \usage{
 add_CH_origin(df)
 }
