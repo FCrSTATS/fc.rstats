@@ -1,4 +1,4 @@
-#' Convert the pass destination from OPTA to ChyronHego spec 
+#' Convert the pass origin from OPTA to ChyronHego spec 
 #'
 #' OPTA event data has two variables x and y, that represent the the x and y pitch
 #' coordinates for the origina point of an event. We can convert from OPTA 0-100 values to 

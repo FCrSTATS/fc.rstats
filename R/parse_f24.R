@@ -25,6 +25,10 @@ parse_f24 <- function(xml.filename){
      
     }
     
+    ## convert string to numeric 
+    
+    string_to_numeric <- function(x){as.numeric(as.character(x))}
+    
     ## Pick the Maximum (non-NA) Values
     
     pick.out.the.maximum.values <- function(qualifier.values){
@@ -97,7 +101,18 @@ parse_f24 <- function(xml.filename){
       dplyr::bind_rows()
       
     
+  #// convert strings to numerics ---------------------------------------------------------//
+    
+    events$min <- string_to_numeric(events$min)
+    events$sec <- string_to_numeric(events$sec)
+    events$x <- string_to_numeric(events$x)
+    events$y <- string_to_numeric(events$y)
+    events$`140` <- string_to_numeric(events$`140`)
+    events$`141` <- string_to_numeric(events$`141`)
+    events$outcome <- string_to_numeric(events$outcome)
+    
   #// Return the resulting dataframe -----------------------------------------------------//
+
 
     return(events)
     
