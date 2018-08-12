@@ -34,7 +34,7 @@ data is recorded at 25 frames a second. The addition of a TimeSync variable to t
 **Convert the pass origin from OPTA to ChyronHego spec:** OPTA event data has two variables x and y, that represent the the x and y pitch coordinates for the origina point of an event. We can convert from OPTA 0-100 values to ChyronHego CM and return the events dataframe back with new variables of origin.x and origin.y. The attacking.direction needs to be added to the events dataframe first from the 'add_attacking_direction' function in this package. 
 
 ### add_pass_target()
-**Convert the pass destination from OPTA to ChyronHego spec:** OPTA event data has two variables x and y, that represent the the x and y pitch coordinates for the origina point of an event. We can convert from OPTA 0-100 values to ChyronHego CM and return the events dataframe back with new variables of origin.x and origin.y. The attacking.direction needs to be added to the events dataframe first from the 'add_attacking_direction' function in this package. 
+**Convert the pass destination from OPTA to ChyronHego spec:** OPTA event data has two variables x and y, that represent the the x and y pitch coordinates for the origina point of an event. We can convert from OPTA 0-100 values to ChyronHego CM and return the events dataframe back with new variables of target.x and target.y. The attacking.direction needs to be added to the events dataframe first from the 'add_attacking_direction' function in this package. 
 
 ## Plotting Functions 
 
