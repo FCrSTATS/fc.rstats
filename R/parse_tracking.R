@@ -54,12 +54,15 @@ parse_tracking <- function(tracking.xml, metadata){
     
     
     Unpack.1.Player.of.Tracking <- function(r){
-        return(data.frame(team_HA = as.numeric(as.character(unlist(strsplit(unlist(r),","))[1])), 
-                           TrackID = as.numeric(as.character(unlist(strsplit(unlist(r),","))[2])), 
-                           JerseyNo = as.numeric(as.character(unlist(strsplit(unlist(r),","))[3])),
-                           x = as.numeric(as.character(unlist(strsplit(unlist(r),","))[4])), 
-                           y = as.numeric(as.character(unlist(strsplit(unlist(r),","))[5])),
-                           speed = as.numeric(as.character(unlist(strsplit(unlist(r),","))[6])),
+        
+              parts <- unlist(strsplit(unlist(r),","))
+              
+              return(data.frame(team_HA = as.numeric(as.character(parts[1])), 
+                           TrackID = as.numeric(as.character(parts[2])), 
+                           JerseyNo = as.numeric(as.character(parts[3])), 
+                           x = as.numeric(as.character(parts[4])), 
+                           y = as.numeric(as.character(parts[5])), 
+                           speed = as.numeric(as.character(parts[6])), 
                            z = 10))
     }
     
