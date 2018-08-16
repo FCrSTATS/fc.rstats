@@ -5,8 +5,8 @@
 #' per frame combined in a string. This function spilts up the string and arranges the 
 #' resulting data in a logical format. 
 #'
-#' @param tracking.xml Path to the input file
-#' @param metadata Dataframe of metadata as created via parse_CH_metadata() in this package
+#' @param tracking.dat Path to the input file
+#' @param metadata.xml Dataframe of metadata as created via parse_CH_metadata() in this package
 #' @return A dataframe of the parsed tracking data 
 #' @export
 

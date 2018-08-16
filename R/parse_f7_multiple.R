@@ -1,15 +1,20 @@
-#' Parse an OPTA f7 Files 
+#' Parse Multiple OPTA f7 Files 
 #'
 #' An OPTA f7 file is an xml file with various information about a match such as 
-#' lineups, goals, cards, kits used and more. This function takes the file location 
-#' and parses the XML file into a dataframes which are stored in a list. 
+#' lineups, goals, cards, kits used and more. This function takes the file locations 
+#' and parses the XML file into a dataframes which are stored in a list. This function
+#' only works if you have a file location similar to "Database/f7/999999_f7.xml"
 #'
 #' @param f7.xml Path to the input file
-#' @param MatchID The ID number of the game to be parsed
 #' @return A list of dataframes containing match information
 #' @export
 
-parse_f7 <- function(f7.xml, MatchID){
+parse_f7_multiple <- function(f7.xml){
+  
+    xml.filename.temp <- unlist(strsplit(f7.xml, 'f7'))[2]
+    xml.filename.temp <- unlist(strsplit(xml.filename.temp, '_f7.xml'))[1]
+    xml.filename.temp <- unlist(regmatches(xml.filename.temp, gregexpr('\\(?[0-9,.]+', xml.filename.temp)))
+    MatchID <- gsub('\\(', '-', gsub(',', '', xml.filename.temp))
    
 #//------ Load XML --------------------------------------------------------//
   
