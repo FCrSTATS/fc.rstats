@@ -7,9 +7,9 @@
 parse_tracking(tracking.xml, metadata)
 }
 \arguments{
-\item{tracking.xml}{Path to the input file}
+\item{tracking.dat}{Path to the input file}
 
-\item{metadata}{Dataframe of metadata as created via parse_CH_metadata() in this package}
+\item{metadata.xml}{Dataframe of metadata as created via parse_CH_metadata() in this package}
 }
 \value{
 A dataframe of the parsed tracking data
