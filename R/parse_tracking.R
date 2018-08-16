@@ -6,16 +6,15 @@
 #' resulting data in a logical format. 
 #'
 #' @param tracking.dat Path to the input file
-#' @param metadata.xml Dataframe of metadata as created via parse_CH_metadata() in this package
-#' @return A dataframe of the parsed tracking data 
+#' @param metadata.xml Path to the input file
 #' @export
 
-parse_tracking <- function(tracking.xml, metadata){
+parse_tracking <- function(tracking.xml, metadata.xml){
   
             dat <- read.table(tracking.xml, stringsAsFactors = F)
             dat <- dat$V1
             
-            metadata <- parse_CH_metadata(metaXML)
+            metadata <- parse_CH_metadata(metadata.xml)
             
                 ## calculate the starting frame 
             starting.frame <- unlist(strsplit(as.character(dat[1]), ":", fixed = FALSE, perl = FALSE, useBytes = FALSE))[1]
