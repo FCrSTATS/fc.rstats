@@ -4,15 +4,12 @@
 \alias{parse_tracking}
 \title{Parse an ChyronHego Tracking Data File}
 \usage{
-parse_tracking(tracking.xml, metadata)
+parse_tracking(tracking.xml, metadata.xml)
 }
 \arguments{
-\item{tracking.dat}{Path to the input file}
+\item{metadata.xml}{Path to the input file}
 
-\item{metadata.xml}{Dataframe of metadata as created via parse_CH_metadata() in this package}
-}
-\value{
-A dataframe of the parsed tracking data
+\item{tracking.dat}{Path to the input file}
 }
 \description{
 ChyronHego's tracking data contains positional data at 25 frames per second.
