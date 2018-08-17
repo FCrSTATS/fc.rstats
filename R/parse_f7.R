@@ -82,7 +82,7 @@ parse_f7 <- function(f7.xml, MatchID){
 
     ID_DB$Mins.Played <- ID_DB$TimeOff - ID_DB$TimeOn
     ID_DB$MatchID <- MatchID
-    colnames(ID_DB)[8] <- "JerseyNo"
+    colnames(ID_DB)[7] <- "JerseyNo"
 
     
 #//------ GameInfo ------------------------------------------------------//
