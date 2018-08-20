@@ -1,4 +1,5 @@
-# fc.rstats
+![](https://github.com/FCrSTATS/fc.rstats/blob/master/images/twitterImage.jpg)
+
 A package with various functions that help people working with OPTA and ChyronHego data, this will be a regularly updated with new functions. Installed via: 
 
 ``` r
