@@ -13,7 +13,7 @@
 
 add_attacking_direction <- function(events, tDAT, metaDF, GameCentre){
 
-period1.GK.check <- tDAT %>% filter(frameID == metaDF$period1Start + 100)
+period1.GK.check <- tDAT %>% filter(FrameID == metaDF$period1Start + 100)
 T1.GK <- GameCentre$PlayersDB %>% filter(team_HA == 1 & Position == "Goalkeeper") %>% select(JerseyNo)
 period1.GK.position <- period1.GK.check %>% filter(team_HA == 1 & JerseyNo == as.numeric(T1.GK)) %>% select(x) %>% as.numeric()
 attacking.direction.t1.p1 <- ifelse(period1.GK.position < 0, 1, -1)
