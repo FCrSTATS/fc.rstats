@@ -7,10 +7,7 @@ License: 3.5.0
 Encoding: UTF-8
 LazyData: false
 Depends: 
-	dplyr,
 	xml2,
-	purrr,
 	XML,
-	ggplot2,
 	tidyverse
 RoxygenNote: 6.0.1
