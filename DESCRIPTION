@@ -3,8 +3,7 @@ Title: A package with various functions that help people working with OPTA and C
 Version: 1.0
 Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
 Description: A package with various functions that help people working with OPTA and ChyronHego data. 
-Depends: R (>= 3.5.0)
-License: Do as you please 
+License: 3.5.0 
 Encoding: UTF-8
 LazyData: false
 Depends: 
