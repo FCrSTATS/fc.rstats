@@ -47,10 +47,10 @@ parse_f7 <- function(f7.xml, MatchID){
   lineup.catch$PlayerRef <- gsub("p","",lineup.catch$PlayerRef) ## remove P from the player ID
   colnames(lineup.catch)[2] <- "player_id"
   
-  team_break.finder = ifelse( lag(lineup.catch$Formation_Place, 1) == 0 & lineup.catch$Formation_Place != 0, 1, 0 )
-  lineup.catch$team_HA = unlist(lapply(team_break.finder,function(x) replace(x,is.na(x),0)))
-  lineup.catch$team_HA = cumsum(lineup.catch$team_HA)
-  lineup.catch$team_HA = abs(lineup.catch$team_HA - 1)
+  team_break_finder = ifelse( lag(lineup.catch$Formation_Place, 1) == 0 & lineup.catch$Formation_Place != 0, 1, 0 )
+  lineup_catch$team_HA = unlist(lapply(team_break_finder,function(x) replace(x,is.na(x),0)))
+  lineup_catch$team_HA = cumsum(lineup_catch$team_HA)
+  lineup_catch$team_HA = abs(lineup_catch$team_HA - 1)
   
   FirstName <- xpathSApply(pbpParse, paste("//", "Team/Player/PersonName/First", sep=""), xmlValue)
   LastName <- xpathSApply(pbpParse, paste("//", "Team/Player/PersonName/Last", sep=""), xmlValue)
